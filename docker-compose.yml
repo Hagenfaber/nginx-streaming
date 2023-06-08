@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  web:
+    container_name: hagenfaber-nginx-streaming
+    build: .
+
+    restart: unless-stopped
+    networks:
+      - websites
+
+networks:
+  websites:
+    name: websites
+    driver: bridge
