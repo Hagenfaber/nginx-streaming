@@ -4,6 +4,15 @@ services:
     container_name: hagenfaber-nginx-streaming
     build: .
 
+    ports:
+      - "80:80"
+      - "443:443"
+      - "1935:1935"
+
+    volumes:
+      - ./src:/usr/share/nginx/html
+
+
     restart: unless-stopped
     networks:
       - websites

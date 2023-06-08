@@ -9,7 +9,6 @@ RUN apt-get install --no-install-recommends --no-install-suggests -y \
                         libexif-dev
 
 WORKDIR /usr/share/nginx/html
-COPY src/ .
 # new
 COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 COPY nginx/main_nginx.conf /etc/nginx/nginx.conf
